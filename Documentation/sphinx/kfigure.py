@@ -421,8 +421,6 @@ def visit_kernel_render(self, node):
     app = self.builder.app
     srclang = node.get('srclang')
 
-    kernellog.verbose('visit kernel-render node lang: "%s"' % (srclang))
-
     tmp_ext = RENDER_MARKUP_EXT.get(srclang, None)
     if tmp_ext is None:
         kernellog.warn('kernel-render: "%s" unknow / include raw.' % (srclang))
